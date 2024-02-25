@@ -137,7 +137,7 @@ function Signup() {
             />
           </div>
           <label
-            for="terms"
+            htmlFor="terms"
             className="ms-2 text-sm font-medium text-gray-900 dark:text-gray-300"
           >
             I agree with the{" "}
