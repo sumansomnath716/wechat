@@ -9,6 +9,7 @@ import Signin from "./screens/auth/Signin";
 import Auth from "./screens/auth/Auth";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Main from "./screens/main/Main";
+import Notfound from "./screens/Notfound/Notfound";
 const root = ReactDOM.createRoot(document.getElementById("root"));
 const router = createBrowserRouter([
   {
@@ -42,6 +43,10 @@ const router = createBrowserRouter([
       },
     ],
   },
+  {
+    path:"*",
+    element:<Notfound/>
+  }
 ]);
 root.render(
   <React.StrictMode>
