@@ -102,31 +102,31 @@ const Main = () => {
               >
                   <div className="flex-1 justify-between flex flex-col h-full ">
                     <div className="flex sm:items-center justify-between py-3 border-b border-b-gray-200">
-                      <div className="relative flex items-center space-x-4">
+                      <div className="relative flex items-center space-x-2">
                         <div className="relative pl-2">
-                          <span className="absolute text-green-500 right-0 bottom-0">
-                            <svg width="20" height="20">
+                          <span className="absolute text-green-500 right-0 top-[26px]">
+                            <svg width="10" height="10">
                               <circle
-                                cx="8"
-                                cy="8"
-                                r="8"
-                                fill="currentColor"
+                                cx="6"
+                                cy="6"
+                                r="4"
+                                fill="green"
                               ></circle>
                             </svg>
                           </span>
                           <img
                             src="https://images.unsplash.com/photo-1549078642-b2ba4bda0cdb?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=facearea&amp;facepad=3&amp;w=144&amp;h=144"
                             alt=""
-                            className="w-10 sm:w-12 h-10 sm:h-12 rounded-full"
+                            className="w-10 sm:w-10 h-10 sm:h-10 rounded-full"
                           />
                         </div>
-                        <div className="flex flex-col leading-tight">
-                          <div className="text-2xl mt-1 flex items-center">
-                            <span className="text-gray-700 mr-3">
+                        <div className="flex flex-col">
+                          <div className="text-sm mt-1 flex items-center font-medium">
+                            <span className="text-gray-700">
                               Anderson Vanhron
                             </span>
                           </div>
-                          <span className="text-md text-green-900 font-bold ">
+                          <span className="text-xs text-green-900 font-medium ">
                             Online
                           </span>
                         </div>
@@ -194,7 +194,10 @@ const Main = () => {
                     <div
                       id="messages"
                       style={{backgroundImage:`url(${IMG})`}}
-                      className={`flex flex-col space-y-4 p-3 bg-no-repeat bg-center bg-cover bg-opacity-75 bg-green-100 overflow-y-auto scrollbar-thumb-blue scrollbar-thumb-rounded scrollbar-track-blue-lighter scrollbar-w-2 scrolling-touch
+                      className={`flex flex-col space-y-4 p-3 bg-no-repeat bg-center
+                       bg-cover bg-opacity-75 bg-green-100 overflow-y-auto 
+                       scrollbar-thumb-blue scrollbar-thumb-rounded scrollbar-track-blue-lighter
+                        scrollbar-w-2 scrolling-touch
                       `}
                     >
 
