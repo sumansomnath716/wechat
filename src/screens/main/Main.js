@@ -1,5 +1,5 @@
 import React from "react";
-// import chatImg from '';
+// import Chat from '../../../src/assets/images/chat.png';
 const Main = () => {
   return (
     <>
@@ -17,10 +17,10 @@ const Main = () => {
               <div className="bg-white h-full w-full shadow-xl border-slate-500">
                       <div className="grid grid-cols-3 gap-0 h-full w-full">
                           <div className="col-span-1 w-full min-h-full overflow-y-auto">01</div>
-                          <div className="col-span-2 
-                          bg-[url('../../../src/Assets/Images/chat.png')]
-                          overflow-y-auto"></div>
+                          <div className={`col-span-2 overflow-y-auto`}>
 
+                              
+                          </div>
                       </div>
               </div>
         </div>
