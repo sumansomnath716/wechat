@@ -13,6 +13,7 @@ const Main = () => {
         to-green-900
           w-full h-52"
         ></div>
+        
         {/* End */}
 
         {/* Chat Window */}
