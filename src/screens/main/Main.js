@@ -1,6 +1,6 @@
 import React from "react";
 // import IMG from './chat.png'
-import IMG from '../../assets/images/chat.png'
+import IMG from '../../assets/Images/chat.png'
 
 const Main = () => {
   return (
