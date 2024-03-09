@@ -28,33 +28,6 @@ const Main = () => {
                   aria-label="Sidebar"
                 >
                   <div className="h-full overflow-y-auto bg-gray-50 dark:bg-gray-800">
-                    {/* <a
-                      href="https://flowbite.com/"
-                      className="flex items-center ps-2.5 mb-5"
-                    >
-                      <div className="relative w-10 h-10 overflow-hidden bg-gray-100 rounded-full dark:bg-gray-600">
-                        <svg
-                          className="absolute w-7 h-7 text-gray-400 left-1 top-1"
-                          fill="currentColor"
-                          viewBox="0 0 20 20"
-                          xmlns="http://www.w3.org/2000/svg"
-                        >
-                          <path
-                            fill-rule="evenodd"
-                            d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z"
-                            clip-rule="evenodd"
-                          ></path>
-                        </svg>
-                      </div>
-
-                      <span className="self-center text-xl font-semibold whitespace-nowrap text-gray-800 pl-2 dark:text-white">
-                        Somnath
-                      </span>
-                      <span className="material-symbols-outlined text-3xl pl-32 text-gray-400">
-                        more_vert
-                      </span>
-                    </a> */}
-
                     <div className="flex sm:items-center justify-between py-3 border-b border-b-gray-200 px-2">
                       <div className="flex items-center justify-between space-x-2">
                         <div className="relative inline-flex 
