@@ -32,9 +32,9 @@ const Main = () => {
                       href="https://flowbite.com/"
                       className="flex items-center ps-2.5 mb-5"
                     >
-                      <div class="relative w-10 h-10 overflow-hidden bg-gray-100 rounded-full dark:bg-gray-600">
+                      <div className="relative w-10 h-10 overflow-hidden bg-gray-100 rounded-full dark:bg-gray-600">
                         <svg
-                          class="absolute w-7 h-7 text-gray-400 left-1 top-1"
+                          className="absolute w-7 h-7 text-gray-400 left-1 top-1"
                           fill="currentColor"
                           viewBox="0 0 20 20"
                           xmlns="http://www.w3.org/2000/svg"
@@ -50,18 +50,41 @@ const Main = () => {
                       <span className="self-center text-xl font-semibold whitespace-nowrap text-gray-800 pl-2 dark:text-white">
                         Somnath
                       </span>
-                      <span class="material-symbols-outlined text-3xl pl-32 text-gray-400">
+                      <span className="material-symbols-outlined text-3xl pl-32 text-gray-400">
                         more_vert
                       </span>
                     </a> */}
 
-                    <div className="flex sm:items-center justify-between py-3 border-b border-b-gray-200">
-                     <div class="relative inline-flex 
-                     items-center justify-center
-                      w-12 h-12
-                      overflow-hidden bg-gray-400 rounded-full dark:bg-gray-600">
-                        <span class="font-medium text-gray-600 dark:text-gray-300">JL</span>
+                    <div className="flex sm:items-center justify-between py-3 border-b border-b-gray-200 px-2">
+                      <div className="flex items-center justify-between space-x-2">
+                        <div className="relative inline-flex 
+                            items-center justify-center
+                            overflow-hidden bg-neutral-200 rounded-full dark:bg-gray-600
+                            w-8 sm:w-8 h-8 sm:h-8 rounded-full
+                            py-3">
+                          <span className="font-bold text-gray-600 dark:text-gray-300 text-xs">SSM</span>
+                        </div>
+                        <div className="flex flex-col">
+                          <span className="text-xs font-medium">Suman Somnath Mitra</span>
+                          <span className="text-[10px] font-medium">01:30 PM</span>
+
+                        </div>
                       </div>
+                    
+
+                      <button
+                        type="button"
+                        className="inline-flex items-center justify-center rounded-full h-8 w-8 
+                        transition duration-500 ease-in-out text-green-900
+                        font-bold
+                        bg-gray-100
+                        hover:text-white
+                        hover:bg-green-900 focus:outline-none"
+                      >
+                       <span className="material-symbols-outlined text-[20px]">more_vert</span>
+                  
+                      </button>
+
                     </div>
 
                     {/* Below Portion of Side Bar */}
@@ -180,9 +203,9 @@ const Main = () => {
                           >
                             <path
                               stroke="currentColor"
-                              stroke-linecap="round"
-                              stroke-linejoin="round"
-                              stroke-width="2"
+                              strokeLinecap="round"
+                              strokeLinejoin="round"
+                              strokeWidth="2"
                               d="M1 8h11m0 0L8 4m4 4-4 4m4-11h3a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2h-3"
                             />
                           </svg>
@@ -228,89 +251,66 @@ const Main = () => {
                     <div className="relative flex items-center space-x-4">
                       <div className="relative pl-2">
                         <span className="absolute text-green-500 right-0 bottom-0">
-                          <svg width="20" height="20">
+                          <svg width="8" height="8">
                             <circle
-                              cx="8"
-                              cy="8"
-                              r="8"
-                              fill="currentColor"
+                              cx="4"
+                              cy="4"
+                              r="4"
+                              fill="green"
                             ></circle>
                           </svg>
                         </span>
                         <img
                           src="https://images.unsplash.com/photo-1549078642-b2ba4bda0cdb?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=facearea&amp;facepad=3&amp;w=144&amp;h=144"
                           alt=""
-                          className="w-10 sm:w-12 h-10 sm:h-12 rounded-full"
+                          className="w-8 sm:w-8 h-8 sm:h-8 rounded-full"
                         />
                       </div>
                       <div className="flex flex-col leading-tight">
-                        <div className="text-2xl mt-1 flex items-center">
+                        <div className="text-xs mt-1 flex items-center font-medium">
                           <span className="text-gray-700 mr-3">
-                            Anderson Vanhron
+                            Suman Somnath Da
                           </span>
                         </div>
-                        <span className="text-md text-green-900 font-bold ">
+                        <span className="text-[10px] text-green-900 font-bold">
                           Online
                         </span>
                       </div>
                     </div>
                     <div className="flex items-center space-x-2 pr-3">
-                      <button
+                    <button
                         type="button"
-                        className="inline-flex items-center justify-center rounded-lg border h-10 w-10 transition duration-500 ease-in-out text-gray-500 hover:bg-white focus:outline-none"
+                        className="inline-flex items-center justify-center rounded-full h-8 w-8 
+                        transition duration-500 ease-in-out text-green-900
+                        bg-gray-100
+                        hover:text-white
+                        font-bold
+                        hover:bg-green-900 focus:outline-none
+                        "
                       >
-                        <svg
-                          xmlns="http://www.w3.org/2000/svg"
-                          fill="none"
-                          viewBox="0 0 24 24"
-                          stroke="currentColor"
-                          className="h-6 w-6"
-                        >
-                          <path
-                            strokeLinecap="round"
-                            strokeLinejoin="round"
-                            strokeWidth="2"
-                            d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
-                          ></path>
-                        </svg>
+                        <span className="material-symbols-outlined text-[20px]">light_mode</span>
                       </button>
                       <button
                         type="button"
-                        className="inline-flex items-center justify-center rounded-lg border h-10 w-10 transition duration-500 ease-in-out text-gray-500 hover:bg-white focus:outline-none"
+                        className="inline-flex items-center justify-center rounded-full h-8 w-8 
+                        transition duration-500 ease-in-out text-green-900
+                        bg-gray-100
+                        hover:text-white
+                        font-bold
+                        hover:bg-green-900 focus:outline-none
+                        "
                       >
-                        <svg
-                          xmlns="http://www.w3.org/2000/svg"
-                          fill="none"
-                          viewBox="0 0 24 24"
-                          stroke="currentColor"
-                          className="h-6 w-6"
-                        >
-                          <path
-                            strokeLinecap="round"
-                            strokeLinejoin="round"
-                            strokeWidth="2"
-                            d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"
-                          ></path>
-                        </svg>
+                        <span className="material-symbols-outlined text-[20px]">search</span>
                       </button>
                       <button
                         type="button"
-                        className="inline-flex items-center justify-center rounded-lg border h-10 w-10 transition duration-500 ease-in-out text-gray-500 hover:bg-white focus:outline-none"
-                      >
-                        <svg
-                          xmlns="http://www.w3.org/2000/svg"
-                          fill="none"
-                          viewBox="0 0 24 24"
-                          stroke="currentColor"
-                          className="h-6 w-6"
-                        >
-                          <path
-                            strokeLinecap="round"
-                            strokeLinejoin="round"
-                            strokeWidth="2"
-                            d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9"
-                          ></path>
-                        </svg>
+                        className="inline-flex items-center justify-center rounded-full h-8 w-8 
+                        transition duration-500 ease-in-out text-green-900
+                        font-bold
+                        bg-gray-100
+                        hover:text-white
+                        hover:bg-green-900 focus:outline-none">
+                        <span className="material-symbols-outlined text-[20px]">videocam</span>
                       </button>
                     </div>
                   </div>
@@ -541,8 +541,10 @@ const Main = () => {
                         </span> */}
                       <input
                         type="text"
-                        placeholder="Write your message!"
-                        className="w-full focus:outline-none border border-gray-400 focus:placeholder-gray-400 text-green-900 font-bold  placeholder-gray-600 bg-white focus:border-green-900 focus:ring-green-900 rounded-md py-3 pr-10 pl-3"
+                        placeholder="write your message....."
+                        className="w-full focus:outline-none border border-gray-400 focus:placeholder-gray-400 text-green-900 font-medium 
+                         placeholder-gray-600 bg-white focus:border-green-900 focus:ring-green-900 rounded-md text-sm
+                          py-2 pr-10 pl-3"
                       />
                       <div className="absolute right-0  items-center inset-y-0 hidden sm:flex">
                         {/* <button
@@ -620,7 +622,7 @@ const Main = () => {
                             >
                               <path d="M10.894 2.553a1 1 0 00-1.788 0l-7 14a1 1 0 001.169 1.409l5-1.429A1 1 0 009 15.571V11a1 1 0 112 0v4.571a1 1 0 00.725.962l5 1.428a1 1 0 001.17-1.408l-7-14z"></path>
                             </svg> */}
-                          <span class="material-symbols-outlined text-3xl">
+                          <span className="material-symbols-outlined text-3xl">
                             send
                           </span>
                         </button>
