@@ -3,27 +3,61 @@ import * as Yup from "yup";
 import { useFormik } from "formik";
 import TDInput from "../../components/TDInput";
 import TDError from "../../components/TDError";
+import { 
+  getAuth, 
+  createUserWithEmailAndPassword, 
+} from 'firebase/auth';
+import {collection, getFirestore, setDoc,doc} from 'firebase/firestore';
+import firebase from '../../firebase';
+import { message} from 'antd';
+
 function Signup() {
+
+  const [messageApi, contextHolder] = message.useMessage();
+
   const initialValues = {
     name: "",
     email: "",
     phone: "",
     password: "",
     rPass: "",
-    terms: "",
+    terms: false,
   };
 
-  // Yup.object({
-  //   password: Yup.string().required('Password is required'),
-  //   passwordConfirmation: Yup.string()
-  //     .test('passwords-match', 'Passwords must match', function(value){
-  //       return this.parent.password === value
-  //     })
-  // })
+  const auth = getAuth(firebase);
+  const firestore = getFirestore(firebase);
 
-  const onSubmit = (values) => {
-    console.log(values);
-    // navigate('/dashboard')
+  const onSubmit = async (values) => {
+
+    formik.resetForm();
+    // await createUserWithEmailAndPassword(auth, 
+    //   values.email, 
+    //   values.password,
+    //   ).then(res =>{
+    //   const {password,rPass, ...rest} = values;
+    //   const docRef = doc(firestore, 'md_user', res.user.uid);
+    //   setDoc(docRef, {...rest}, { merge: true }).then(dt =>{
+    //      formik.resetForm();
+    //       message.open({
+    //         type: 'success',
+    //         content: `User with id ${res.user.uid} is registered successfully`,
+    //       });
+    //     })
+    //     .catch(err =>{
+    //       console.log(err);
+    //       message.open({
+    //         type: 'error',
+    //         content: err.message,
+    //       });
+    //     })
+    // })
+    // .catch(err =>{
+    //   console.log(err.message);
+    //   message.open({
+    //     type: 'error',
+    //     content: err.message,
+    //   });
+    // })
   };
   const validationSchema = Yup.object({
     email: Yup.string()
@@ -32,27 +66,33 @@ function Signup() {
     password: Yup.string().required("Password is required"),
     name: Yup.string().required("Name is required"),
     phone: Yup.string().required("Phone is required").length(10),
-    rPass: Yup.string().oneOf(
+    rPass: Yup.string()
+    .required('Confirm password is required')
+    .oneOf(
       [Yup.ref("password"), null],
       "Passwords must match"
     ),
-    terms: Yup.string().required(""),
+    terms: Yup.boolean()
+    .required('You must accept the Terms of Service to proceed')
+    .oneOf([true], 'Error'),
   });
   const formik = useFormik({
     initialValues,
     onSubmit,
     validationSchema,
     validateOnMount: true,
+    isInitialValid:false
   });
 
-  const handleConfirmPassword = (event) => {
+  const handleConfirmPassword = async (event) => {
     if (event.target.value !== formik.password) {
       console.log("error");
     }
+    // console.log(formik);
   };
   return (
     <div>
-      <form className="max-w-sm mx-auto" onSubmit={formik.handleSubmit}>
+      <form className="max-w-sm mx-auto" onSubmit={formik.handleSubmit} autoComplete="off">
         <div className="mb-4">
           <TDInput
             placeholder="John Doe"
@@ -128,7 +168,7 @@ function Signup() {
             <input
               id="terms"
               type="checkbox"
-              value={formik.values.terms}
+              checked={formik.values.terms}
               name="terms"
               onChange={formik.handleChange}
               onBlur={formik.handleBlur}
